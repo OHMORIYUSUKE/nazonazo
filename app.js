@@ -43,8 +43,18 @@ const quiz=[
             '金平糖'
         ],
         correct:'飴'
+    },
+    {
+        question:'ひっくり返ると軽くなる動物ってなーんだ？',
+        hint:'かるくなる',
+        answer:[
+            'キリン',
+            'ラクダ',
+            'ゴリラ',
+            'イルカ'
+        ],
+        correct:'イルカ'
     }
-
 ]
 
 
@@ -75,7 +85,8 @@ const setupQuiz = () =>{
     }
 }
 const st=()=>{
-    window.alert('なぞなぞスタート！');
+    //window.alert('なぞなぞスタート！');
+    swal("なぞなぞゲーム！", "準備はいい？", "info");
 };
 
 st();
@@ -87,11 +98,13 @@ setupQuiz();//setupQuiz();//クイズ画面を作る
 //スコアも管理する関数
 const clickHandler=(e)=>{
     if(quiz[quizIndex].correct===e.target.textContent){
-        window.alert('正解！');
+        // window.alert('正解！');
+        swal("正解", "やったー", "success");
         
         score++
     }else{
-        window.alert('不正解')
+        // window.alert('不正解')
+        swal("ハズレ", "正解は"+quiz[quizIndex].correct+"だよ", "error");
     }
 
     quizIndex++;
