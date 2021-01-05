@@ -85,8 +85,8 @@ const setupQuiz = () =>{
     }
 }
 const st=()=>{
-    //window.alert('なぞなぞスタート！');
-    swal("なぞなぞゲーム！", "準備はいい？", "info");
+    window.alert('なぞなぞスタート！');
+    //swal("なぞなぞゲーム！", "準備はいい？", "info");
 };
 
 st();
