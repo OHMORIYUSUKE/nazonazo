@@ -121,7 +121,7 @@ const clickHandler=(e)=>{
         document.getElementById('top').style.visibility = 'hidden';
         document.getElementById('foot').style.visibility = 'hidden';
 
-        if(score===4){
+        if(score===5){
             document.getElementById('js-question').textContent = '！満点！おめでとう！';
         }else{
             document.getElementById('js-question').textContent = '残念。満点を目指そう！';
